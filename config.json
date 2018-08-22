@@ -1,18 +1,17 @@
 {
     "model" : {
         "backend":              "Full Yolo",
-        "input_size":           420,
-        "anchors":              [8.06,8.25, 9.21,10.96, 10.55,9.86, 12.20,10.17, 12.34,12.15],
+        "input_size":           44.07,5.28, 5.65,9.56, 7.60,11.65, 9.94,8.81, 11.15,12.07],
         "max_box_per_image":    10,        
-        "labels":               ["buddha"]
+        "labels":               ["raccoon"]
     },
 
     "train": {
-        "train_image_folder":   "images\\train\\images\\",
-        "train_annot_folder":   "images\\train\\xml_annotation\\",
+        "train_image_folder":   "images_racoon\\",
+        "train_annot_folder":   "annotations_raccoon\\",
           
         "train_times":          5,
-        "pretrained_weights":   "full_yolo_raccoon.h5",
+        "pretrained_weights":   "",
         "batch_size":           5,
         "learning_rate":        1e-4,
         "nb_epochs":            2,
@@ -28,8 +27,8 @@
     },
 
     "valid": {
-        "valid_image_folder":   "images\\test\\images\\",
-        "valid_annot_folder":   "images\\test\\xml_annotation\\",
+        "valid_image_folder":   "",
+        "valid_annot_folder":   "",
 
         "valid_times":          1
     }
