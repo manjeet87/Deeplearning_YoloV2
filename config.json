@@ -1,0 +1,36 @@
+{
+    "model" : {
+        "backend":              "Full Yolo",
+        "input_size":           420,
+        "anchors":              [8.06,8.25, 9.21,10.96, 10.55,9.86, 12.20,10.17, 12.34,12.15],
+        "max_box_per_image":    10,        
+        "labels":               ["buddha"]
+    },
+
+    "train": {
+        "train_image_folder":   "images\\train\\images\\",
+        "train_annot_folder":   "images\\train\\xml_annotation\\",
+          
+        "train_times":          5,
+        "pretrained_weights":   "full_yolo_raccoon.h5",
+        "batch_size":           5,
+        "learning_rate":        1e-4,
+        "nb_epochs":            2,
+        "warmup_epochs":        3,
+
+        "object_scale":         5.0 ,
+        "no_object_scale":      1.0,
+        "coord_scale":          1.0,
+        "class_scale":          1.0,
+
+        "saved_weights_name":   "full_yolo_buddha.h5",
+        "debug":                true
+    },
+
+    "valid": {
+        "valid_image_folder":   "images\\test\\images\\",
+        "valid_annot_folder":   "images\\test\\xml_annotation\\",
+
+        "valid_times":          1
+    }
+}
